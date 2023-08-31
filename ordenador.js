@@ -34,6 +34,8 @@ async function coletaPropriedades() {
             return propriedades;
         } else if (isNaN(propriedade)) {
             propriedades.push(propriedade);
+        } else if (!isNaN(propriedades)) {
+            console.log("Insira uma propriedade válida!")
         }
     }
 }
