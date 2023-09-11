@@ -2,21 +2,10 @@
 import readline from "readline";
 
 //Aqui é criada a constande readline para criar a interface;
-const rl = readline.createInterface({
+export const rl = readline.createInterface({
     input: process.stdin,
     output: process.stdout
 });
-
-/**
- * Aqui, é definida uma função na qual o usuário utiliza o prompt para inserir os dadoss/propriedades CSS
- * Esta retornará uma promessa, e dentro dela é utilizado a "rl.question" para que seja mostrado um prompt...
- * ... e aguarde a entrada do usuário. Este recebe como argumento o prompt e um "resolve", que serve como callback.
- */
-function entradaUsuario(prompt) {
-    return new Promise(resolve => {
-        rl.question(prompt, resolve)
-    })
-}
 
 /**
  * Aqui, um loop é criado para que toda vez que o usuário digite uma propriedade, ela seja guardada no array...
