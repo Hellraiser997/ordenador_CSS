@@ -1,33 +1,12 @@
 //Importação dos recursos do readline;
 import readline from "readline";
+import { coletaPropriedades } from "./src/controllers/coleta.js";
 
 //Aqui é criada a constande readline para criar a interface;
 export const rl = readline.createInterface({
     input: process.stdin,
     output: process.stdout
 });
-
-/**
- * Aqui, um loop é criado para que toda vez que o usuário digite uma propriedade, ela seja guardada no array...
- * ... e uma nova possa ser digitada logo em seguida.
- * Caso o usuário deseje sair, basta digitar "sair". 
- * Caso a propriedade não seja um número, esta será guardada no array. Caso seja, esta será ignorada. 
- */
-async function coletaPropriedades() {
-    const propriedades = [];
-    while (true) {
-        const propriedade = await entradaUsuario(
-            'Digite aqui as propriedades desejadas:'
-        )
-        if (propriedade.toLocaleUpperCase() === 'SAIR') {
-            return propriedades;
-        } else if (isNaN(propriedade)) {
-            propriedades.push(propriedade);
-        } else if (!isNaN(propriedades)) {
-            console.log("Insira uma propriedade válida!")
-        }
-    }
-}
 
 /**
  * Aqui é criada uma função para organização das propriedade a partir da const "propriedadesOrdenadas"...
