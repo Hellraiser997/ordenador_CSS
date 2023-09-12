@@ -1,9 +1,11 @@
 //Importação dos recursos do readline;
 import readline from "readline";
+//Importação do script de coleta;
 import { coletaPropriedades } from "./src/controllers/coleta.js";
+//Importação do script que mostra a lista ordenada;
 import { mostrarPropriedadesOrdenadas } from "./src/controllers/display.js";
 
-//Aqui é criada a constande readline para criar a interface;
+//Aqui é criada a constande readline para criar a interface e esta é exportada;
 export const rl = readline.createInterface({
     input: process.stdin,
     output: process.stdout
