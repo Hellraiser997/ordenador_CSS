@@ -1,3 +1,6 @@
+//Aqui, é importada a função 'entradaUsuario', uma vez que a coleta de propriedades depende desta...
+//...(como é possível notar, há a existência de um "await" na função de coleta, o que significa que...
+//... a função só será realizada quando o 'entradaUsuario' for "satisfeito")
 import { entradaUsuario } from "../models/input.js";
 
 
