@@ -1,24 +1,13 @@
 //Importação dos recursos do readline;
 import readline from "readline";
 import { coletaPropriedades } from "./src/controllers/coleta.js";
+import { mostrarPropriedadesOrdenadas } from "./src/controllers/display.js";
 
 //Aqui é criada a constande readline para criar a interface;
 export const rl = readline.createInterface({
     input: process.stdin,
     output: process.stdout
 });
-
-/**
- * Aqui é criada uma função para organização das propriedade a partir da const "propriedadesOrdenadas"...
- * ... usando os métodos "slice()" e "sort()" para organizar as propriedades;
- * Uma mensagem é mostrada ao usuário pelo console.log;
- * É utilizado o "forEach" para que os itens sejam mostrados separados em linhas.
- */
-function mostrarPropriedadesOrdenadas(propriedades) {
-    const propriedadesOrdenadas = propriedades.slice().sort();
-    console.log("Propriedades CSS ordenadas A-Z:");
-    propriedadesOrdenadas.forEach(prop => console.log(prop))
-}
 
 /**
  * Nesta função, é mostrada uma mensagem ao usuário a partir do console.log;
